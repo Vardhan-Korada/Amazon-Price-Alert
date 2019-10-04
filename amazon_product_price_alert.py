@@ -12,16 +12,16 @@ def send_email():
     server.ehlo()
     server.starttls()
     server.ehlo()
-    server.login("vardhankorada@gmail.com","thiswasmeme")
+    server.login("***********","*********")
     subject = "Price Drop Alert !!!"
-    body = "Hey Vardhan!! \n The price of boat ear phones decreased below your described price..."
+    body = "Hey **********!! \n The price of ******** decreased below your described price..."
     msg = f"Subject: {subject} \n\n {body}"
-    server.sendmail("vardhankorada@gmail.com","rahul.chinna.81870@gmail.com",msg)
+    server.sendmail("***************","****************",msg)
     print("Mail has been sent...")
     server.quit()
 def push_notification():
     notify = Notify()
-    notify.send("Hey Rahul price just got decreased...")
+    notify.send("Hey ****** price just got decreased...")
     print("Notification sent...")
 def get_url(org_url):
     dp = re.findall(r'/dp/\S+\?',org_url)
@@ -65,7 +65,7 @@ if __name__ == "__main__":
         print("Count : ",str(count),", Checking at : ",datetime.now())
         check_price(URL,des_price)
         print("Rechecking...")
-        time.sleep(10)
+        time.sleep(3600)
 
     
 
